@@ -9,14 +9,14 @@ sudo apt upgrade
  
 1. Create a hadoop user and configure passwordless ssh
 sudo addgroup hadoop
-sudo adduser -- ingroup hadoop hduser
+sudo adduser --ingroup hadoop hduser
  
 sudo visudo
 hduser ALL=(ALL:ALL) ALL
  
 su - hduser 
  
-2. Install Java 11 Ubuntu 18.04
+2. Install Java 8 Ubuntu 18.04
  
 java -version
  
