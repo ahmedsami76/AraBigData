@@ -21,7 +21,7 @@ su - hduser
 java -version
  
 cd /usr/local 
-sudo wget https://blog.forsre.com/java/jdk-8u221-linux-x64.tar.gz
+sudo wget 'https://files-cdn.liferay.com/mirrors/download.oracle.com/otn-pub/java/jdk/8u221-b11/jdk-8u221-linux-x64.tar.gz'
  
 sudo tar -xzvf jdk-8u221-linux-x64.tar.gz
 sudo mv jdk1.8.0_221/ java 
