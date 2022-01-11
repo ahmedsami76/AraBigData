@@ -47,8 +47,10 @@ java -version
 sudo apt-get update
 sudo apt-get install openssh-server openssh-client
 sudo ufw allow 22
- 
+
+# the below command may fail in docker containers. try 'service ssh restart'
 sudo systemctl restart ssh
+
 sudo apt-get install ssh
 sudo apt-get install rsync
  
@@ -90,6 +92,8 @@ export PATH=$PATH:/usr/local/hadoop/sbin
  
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
+
+
  
 4. Setup hadoop configuration 
 cd /usr/local/hadoop/etc/hadoop/
@@ -100,6 +104,13 @@ export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
 export JAVA_HOME=/usr/local/java
 export HADOOP_HOME_WARN_SUPPRESS="TRUE"
 export HADOOP_ROOT_LOGGER="WARN,DRFA"
+
+# also add the following when installing in docker container for root user
+export HDFS_NAMENODE_USER="root"
+export HDFS_DATANODE_USER="root"
+export HDFS_SECONDARYNAMENODE_USER="root"
+export YARN_RESOURCEMANAGER_USER="root"
+export YARN_NODEMANAGER_USER="root"
  
 sudo vim yarn-site.xml
  
