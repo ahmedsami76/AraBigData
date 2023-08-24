@@ -31,7 +31,7 @@ wget 'https://dlcdn.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz'
 tar xzvf hadoop-3.3.1.tar.gz
 mv hadoop-3.3.1 hadoop
 chmod -R 777 /usr/local/hadoop
-#
+chmod +x /usr/local/hduser
 echo 'net.ipv6.conf.all.disable_ipv6=1' >> /etc/sysctl.conf
 echo 'net.ipv6.conf.default.disable_ipv6=1' >> /etc/sysctl.conf
 echo 'net.ipv6.conf.lo.disable_ipv6=1' >> /etc/sysctl.conf
