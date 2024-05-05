@@ -44,3 +44,6 @@ if [ -f ~/.git-prompt.sh ]; then
   GIT_PS1_SHOWCOLORHINTS=true
   . ~/.git-prompt.sh
 fi
+
+# Alias for git log
+alias graph="git log --oneline --all --decorate --graph"
