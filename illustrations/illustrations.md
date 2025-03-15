@@ -2,11 +2,13 @@
 
 ## Containers vs VMs
 
-![[Pasted image 20250315013511.png]]
+![1](./attachments/1.png)
+
 ## Containerization Concept
 
-![[Pasted image 20250315013534.png]]
+![2](./attachments/2.png)
+
+
 ## Microservices Architecture
 
-
-![[Pasted image 20250315013555.png]]
+![3](./attachments/3.png)
